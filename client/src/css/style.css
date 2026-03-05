@@ -4,19 +4,65 @@
 }
 :root{
   --primary-color:#00008b;
+  --navy: #0B1C2D;
+  --green: #0E5E3A;
+  --gold: #C6A052;
+
 }
 body{
   color: #00008B;
   background-color: #f4f4f4;
-  font: 16px normal Arial helvetica sans-serif;
+  font: 16px normal 'Segoe UI', sans-serif;;
   line-height: 1.6em;
 }
+
+        .hero {
+            background: var(--navy);
+            color: white;
+            padding: 80px 0;
+        }
+
+        .section-title {
+            color: var(--navy);
+            font-weight: bold;
+        }
+
+        .bg-light-green {
+            background: #f4f8f6;
+        }
+
+        .title-gold {
+            color: var(--gold);
+            font-weight: 600;
+        }
+
+        .card-custom {
+            border: none;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            transition: 0.3s;
+        }
+
+        .card-custom:hover {
+            transform: translateY(-5px);
+        }
+
+  .gold-line {
+        width: 80px;
+        height: 4px;
+        background: var(--gold);
+        margin: 15px 0;
+    }
 a{
   text-decoration: none;
 }
 
+.active{
+  color: #C6A052 !important;
+  font-weight: 700;
+}
+
 #logo{
-  margin-left: 80px;
+  margin-left: 5px;
 
 }
 .custom-nav {
@@ -49,13 +95,19 @@ a{
   color: black;
 }
 
-.hero-section {
+/* .hero-section {
   width: 100%;
   background: url('../images/homebg.jpg') no-repeat center center;
   background-size: cover;
   min-height: 50vh;
-  /* width:100%; */
-}
+
+} */
+
+   .hero {
+            background: var(--navy);
+            color: white;
+            padding: 80px 0;
+        }
 
 @media (min-height:500px) {
   .hero-section {
@@ -108,16 +160,20 @@ footer{
   margin-top: 100px;
   height: 60px;
   display: flex;
-  justify-content:center;
+  justify-content:space-between;
   align-items: center;
   position: relative;
 }
+
 
 footer #box-2{
   position: absolute;
  right: 10px;
 }
-
+footer #box-1{
+  position: absolute;
+ left: 10px;
+}
 
 footer i{
  font-size: 25px;
@@ -194,7 +250,7 @@ footer i{
 
 #img-div img{
   width: 100%;
-  height: 500px;
+  height: 100%;
   object-fit: contain;
   padding-top: 20px;
   padding-bottom: 20px;
@@ -271,14 +327,25 @@ footer i{
 /* for admin page*/
 
 #container{
-  background-color:#f4f4f4;
   width: 100%;
   margin: auto;
-  margin-top: 40px;
-  color: white;
-  height: 700px;
+  /* margin-top: 40px; */
+  /* color: white; */
+  height: 600px;
+  
 
 
+}
+
+#modal{
+  width: 100%;
+  height: 100%;
+  background-color:#f4f4f4;
+  display: none;
+
+ 
+
+  
 }
 
 #modal-child{
@@ -286,7 +353,14 @@ footer i{
   width:70%;
   background-color: var(--primary-color);
   border-radius: 15px;
+  margin-top: 20px;
+  margin-bottom: 50px;
+
+ 
 }
+
+
+
 
 .form-group label{
   display: block;
@@ -299,7 +373,7 @@ footer i{
  
  
 }
-.form-group textarea {
+.form-group textarea{
   width: 100%;
  border: none;
  height:50px; 
@@ -319,7 +393,7 @@ footer i{
   background-color: black;
   color: white;
   padding:10px 0;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
   width: 100%;
   border: none;
   border-radius: 15px;
@@ -327,10 +401,17 @@ footer i{
 
 .form-group label{
   margin-bottom: 10px;
+  color: white;
 }
 
 .form-group input{
-  margin-top: 20px;
+    width: 100%;
+ border: none;
+ height:50px; 
+ border: none;
+ border-radius: 12px;
+ border-style: none;
+  margin-top: 10px;
 }
 
 

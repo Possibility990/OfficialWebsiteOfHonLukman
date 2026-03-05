@@ -18,7 +18,8 @@
   },
   "dependencies": {
     "-": "^0.0.1",
-    "@fortawesome/fontawesome-free": "^7.1.0",
-    "axios": "^1.13.4"
+    "@fortawesome/fontawesome-free": "^7.2.0",
+    "axios": "^1.13.4",
+    "bootstrap": "^5.3.8"
   }
 }

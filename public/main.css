@@ -1,3 +1,150 @@
+/*!***********************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/css/spinner.css ***!
+  \***********************************************************************/
+/* Spinner From: https://codepen.io/tbrownvisuals/pen/edGYvx */
+.spinner {
+  position: fixed;
+  z-index: 999;
+  height: 2em;
+  width: 2em;
+  overflow: show;
+  margin: auto;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+/* Transparent Overlay */
+.spinner:before {
+  content: '';
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(rgba(20, 20, 20, 0.8), rgba(0, 0, 0, 0.8));
+
+  background: -webkit-radial-gradient(
+    rgba(20, 20, 20, 0.8),
+    rgba(0, 0, 0, 0.8)
+  );
+}
+
+/* :not(:required) hides these rules from IE9 and below */
+.spinner:not(:required) {
+  /* hide "loading..." text */
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
+}
+
+.spinner:not(:required):after {
+  content: '';
+  display: block;
+  font-size: 10px;
+  width: 1em;
+  height: 1em;
+  margin-top: -0.5em;
+  -webkit-animation: spinner 150ms infinite linear;
+  -moz-animation: spinner 150ms infinite linear;
+  -ms-animation: spinner 150ms infinite linear;
+  -o-animation: spinner 150ms infinite linear;
+  animation: spinner 150ms infinite linear;
+  border-radius: 0.5em;
+  -webkit-box-shadow: rgba(255, 255, 255, 0.75) 1.5em 0 0 0,
+    rgba(255, 255, 255, 0.75) 1.1em 1.1em 0 0,
+    rgba(255, 255, 255, 0.75) 0 1.5em 0 0,
+    rgba(255, 255, 255, 0.75) -1.1em 1.1em 0 0,
+    rgba(255, 255, 255, 0.75) -1.5em 0 0 0,
+    rgba(255, 255, 255, 0.75) -1.1em -1.1em 0 0,
+    rgba(255, 255, 255, 0.75) 0 -1.5em 0 0,
+    rgba(255, 255, 255, 0.75) 1.1em -1.1em 0 0;
+  box-shadow: rgba(255, 255, 255, 0.75) 1.5em 0 0 0,
+    rgba(255, 255, 255, 0.75) 1.1em 1.1em 0 0,
+    rgba(255, 255, 255, 0.75) 0 1.5em 0 0,
+    rgba(255, 255, 255, 0.75) -1.1em 1.1em 0 0,
+    rgba(255, 255, 255, 0.75) -1.5em 0 0 0,
+    rgba(255, 255, 255, 0.75) -1.1em -1.1em 0 0,
+    rgba(255, 255, 255, 0.75) 0 -1.5em 0 0,
+    rgba(255, 255, 255, 0.75) 1.1em -1.1em 0 0;
+}
+
+/* Animation */
+
+@-webkit-keyframes spinner {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@-moz-keyframes spinner {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@-o-keyframes spinner {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes spinner {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
 /*!*********************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/css/style.css ***!
   \*********************************************************************/
@@ -7,19 +154,65 @@
 }
 :root{
   --primary-color:#00008b;
+  --navy: #0B1C2D;
+  --green: #0E5E3A;
+  --gold: #C6A052;
+
 }
 body{
   color: #00008B;
   background-color: #f4f4f4;
-  font: 16px normal Arial helvetica sans-serif;
+  font: 16px normal 'Segoe UI', sans-serif;;
   line-height: 1.6em;
 }
+
+        .hero {
+            background: var(--navy);
+            color: white;
+            padding: 80px 0;
+        }
+
+        .section-title {
+            color: var(--navy);
+            font-weight: bold;
+        }
+
+        .bg-light-green {
+            background: #f4f8f6;
+        }
+
+        .title-gold {
+            color: var(--gold);
+            font-weight: 600;
+        }
+
+        .card-custom {
+            border: none;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            transition: 0.3s;
+        }
+
+        .card-custom:hover {
+            transform: translateY(-5px);
+        }
+
+  .gold-line {
+        width: 80px;
+        height: 4px;
+        background: var(--gold);
+        margin: 15px 0;
+    }
 a{
   text-decoration: none;
 }
 
+.active{
+  color: #C6A052 !important;
+  font-weight: 700;
+}
+
 #logo{
-  margin-left: 80px;
+  margin-left: 5px;
 
 }
 .custom-nav {
@@ -52,13 +245,19 @@ a{
   color: black;
 }
 
-.hero-section {
+/* .hero-section {
   width: 100%;
-  background: url(c1927f30f8c6a6e579c3.jpg) no-repeat center center;
+  background: url('../images/homebg.jpg') no-repeat center center;
   background-size: cover;
   min-height: 50vh;
-  /* width:100%; */
-}
+
+} */
+
+   .hero {
+            background: var(--navy);
+            color: white;
+            padding: 80px 0;
+        }
 
 @media (min-height:500px) {
   .hero-section {
@@ -111,16 +310,20 @@ footer{
   margin-top: 100px;
   height: 60px;
   display: flex;
-  justify-content:center;
+  justify-content:space-between;
   align-items: center;
   position: relative;
 }
+
 
 footer #box-2{
   position: absolute;
  right: 10px;
 }
-
+footer #box-1{
+  position: absolute;
+ left: 10px;
+}
 
 footer i{
  font-size: 25px;
@@ -274,14 +477,24 @@ footer i{
 /* for admin page*/
 
 #container{
-  background-color:#f4f4f4;
   width: 100%;
   margin: auto;
-  margin-top: 40px;
-  color: white;
-  height: 700px;
+  /* margin-top: 40px; */
+  /* color: white; */
+  height: 600px;
+  
 
 
+}
+
+#modal{
+  width: 100%;
+  height: 100%;
+  background-color:#f4f4f4;
+  display: none;
+ 
+
+  
 }
 
 #modal-child{
@@ -289,6 +502,10 @@ footer i{
   width:70%;
   background-color: var(--primary-color);
   border-radius: 15px;
+  margin-top: 20px;
+  margin-bottom: 50px;
+
+ 
 }
 
 .form-group label{
@@ -322,7 +539,7 @@ footer i{
   background-color: black;
   color: white;
   padding:10px 0;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
   width: 100%;
   border: none;
   border-radius: 15px;
@@ -333,7 +550,7 @@ footer i{
 }
 
 .form-group input{
-  margin-top: 20px;
+  margin-top: 10px;
 }
 
 

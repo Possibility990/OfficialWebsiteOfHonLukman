@@ -14,10 +14,20 @@ const NewsSchema = new mongoose.Schema({
         type: String,
         required: [true, 'Please provide a title for the news post']
     },
-    sections: {
-        type: [SectionSchema], // array of sections
-        default: [] // optional, can be empty
+
+    // ✅ NEW FIELD
+    curiosityGap: {
+        type: String,
+        required: [true, 'Please provide a curiosity hook'],
+        maxlength: [120, 'Curiosity hook cannot exceed 120 characters'],
+        trim: true
     },
+
+    sections: {
+        type: [SectionSchema],
+        default: []
+    },
+
     date: {
         type: Date,
         default: Date.now

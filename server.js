@@ -10,8 +10,7 @@ const port = process.env.PORT || 5000;
 // Connect to MongoDB
 connectDB();
 
-// Middleware
-app.use(cors());
+
 
 // static folder
 app.use(express.static(path.join(__dirname, './public')));
@@ -33,9 +32,9 @@ const newsRouter = require('./router/news');
 app.use('/api/news', newsRouter);
 
 // Home route
-app.get('/', (req, res) => {
-    res.json({ message: 'Welcome to the Random API page' });
-});
+// app.get('/', (req, res) => {
+//     res.json({ message: 'Welcome to the Random API page' });
+// });
 
 // Start server
 app.listen(port, () => console.log(`Server is running on port ${port}`));
