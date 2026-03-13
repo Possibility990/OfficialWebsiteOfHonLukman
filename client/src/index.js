@@ -4,24 +4,26 @@ import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import './css/style.css'
 
+
+// import NewsAPI from '../services/newsAPI';
+import global from '../component/global';
 import Utility  from '../component/utils';
 import Modal from '../component/modal';
 import NewsForm  from '../component/newsForm';
 import NewsFormList from '../component/newsFormList';
 
 
+
+// const newsApi = new NewsAPI()
 const utils = new Utility()
-const newsForm = new NewsForm()
+const newsForm = new NewsForm(global)
  const newFromList = new NewsFormList()
 
 
 
 
 
-const global = {
-    currentPage: window.location.pathname,
-    APIURL: 'api/news'
-}
+
 
 
 async function init(){
@@ -31,7 +33,8 @@ async function init(){
         case '/index.html':
             console.log('you are in home page')
             // utils.showSpinner()
-            newFromList._getNews();
+            newFromList._getNews(global);
+        
             
             // utils.removeSpinner()
 
@@ -48,11 +51,11 @@ async function init(){
         break;
         case '/newsDetails.html':
             console.log('you are in news details page')
-            newFromList.getSingle();
+            newFromList.getSingle(global);
         break;
         case '/admin.html':
             console.log('you are in admin page')
-            const modal = new Modal
+            const modal = new Modal()
             newsForm.render();
             // utils.showSpinner();
             // newsForm.postNews();

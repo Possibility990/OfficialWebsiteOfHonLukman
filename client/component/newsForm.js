@@ -1,11 +1,15 @@
 
 // import ideasAPI from "../services/ideasAPI"
 import newsAPI from "../services/newsAPI"
+import Utility from "./utils"
+const utils = new Utility()
+
 
 
 
 class NewsForm{
-    constructor(){
+    constructor(global){
+        this.global = global
         this._formBox = document.getElementById('modal-child')
   
     }
@@ -41,19 +45,17 @@ class NewsForm{
 
 
 
+        // -- Show spinner 
+        utils.showSpinner()
+          const newNews = await newsAPI.postNews(formData, 'news', this.global)
+    
 
-
-          const newNews = await newsAPI.postNews(formData)
-
-       
-        
-        
-
-        // console.log(title, image1,paragraph1,image2,paragraph2,image3,paragraph3)
-     
-        this._newsForm.reset()
+        this._newsForm.reset();
 
         document.dispatchEvent(new Event('closeModal'))
+            // -- Hide spinner
+            utils.removeSpinner();
+
     }
 
 

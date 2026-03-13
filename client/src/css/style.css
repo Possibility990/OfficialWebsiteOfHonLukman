@@ -1,20 +1,24 @@
 *{
   margin: 0;
   padding: 0;
-}
-:root{
-  --primary-color:#00008b;
-  --navy: #0B1C2D;
-  --green: #0E5E3A;
-  --gold: #C6A052;
+        }
+        :root{
+          --primary-color:#00008b;
+          --navy: #0B1C2D;
+          --green: #0E5E3A;
+          --gold: #C6A052;
 
-}
-body{
-  color: #00008B;
-  background-color: #f4f4f4;
-  font: 16px normal 'Segoe UI', sans-serif;;
-  line-height: 1.6em;
-}
+        }
+        body{
+          color: #00008B;
+          background-color: #f4f4f4;
+          font: 16px normal 'Segoe UI', sans-serif;;
+          line-height: 1.6em;
+        }
+/* 
+        #p-color{
+          color: var(--navy);
+        } */
 
         .hero {
             background: var(--navy);
@@ -423,6 +427,35 @@ footer i{
   padding-left:10px;
   font-size: 20px;
 
+}
+
+.pagination1{
+  text-align: center;
+  /* margin: auto; */
+  width: 100%;
+  margin-top: 20px;
+
+  
+}
+
+.pagination1 button{
+ background-color: var(--primary-color);
+ border: none;
+
+ margin:60px 0 20px 20px;
+}
+.pagination1 button:hover{
+ background-color: var(--gold);
+ border: none;
+
+ cursor: pointer;
+
+}
+
+#pagination1{
+  margin: auto;
+ width: 100%;
+ text-align: center; 
 }
 
 

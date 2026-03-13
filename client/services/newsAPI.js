@@ -3,35 +3,41 @@ import axios from 'axios'
 class NewsAPI{
     constructor(){
         //Before hosting
-        this._APIURL = 'http://localhost:5000/api/news'
+      
+       
+       
         //after hosting
         // this._APIURL = '/api/ideas'
     }
 
-    getNews(){
-
-        return axios.get(this._APIURL);
+    getNews(endPoint, global){
+        
+            
+        // console.log('hello bili',this.global.APIURL)
+        return axios.get(`${global.APIURL}${endPoint}?page=${global.page}`);
+        // return axios.get('http://localhost:5000/api/news?page=1');
       
     }
 
-    getSingleNews(id){
-        return axios.get(`${this._APIURL}/${id}`)
+    getSingleNews(id, global, endPoint){
+        return axios.get(`${global.APIURL}${endPoint}/${id}`)
     }
 
     
-    postNews(data){
+    postNews(data, endPoint, global){
+        console.log(global.APIURL, 'from post news')
         
-      return   axios.post(this._APIURL, data)
+      return   axios.post(`${global.APIURL}${endPoint}`, data)
     }
 
-    updateNews(id, data){
-        return axios.put(`${this._APIURL}/${id}`, data)
+    updateNews(id, data, endPoint){
+        return axios.put(`${global.APIURL}${endPoint}/${id}`, data)
     }
 
-    deleteNews(id){
+    deleteNews(id, endPoint){
        
  
-      return axios.delete(`${this._APIURL}/${id}`)
+      return axios.delete(`${global.APIURL}${endPoint}/${id}`)
         
     }
 }
