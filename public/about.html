@@ -10,6 +10,151 @@
     <!-- <link rel="stylesheet" href="css/spinner.css">
   <link rel="stylesheet" href="style.css"> -->
     <title>officialWebsiteOfHonL&K</title>
+
+    <!-- <style>
+
+       /* GLOBAL */
+body{
+    font-family: "Segoe UI", Tahoma, sans-serif;
+    line-height: 1.7;
+    color:#333;
+}
+
+/* NAVBAR */
+.custom-nav{
+    box-shadow:0 3px 10px rgba(0,0,0,0.15);
+}
+
+#logo{
+    font-weight:bold;
+    font-size:1.2rem;
+}
+
+/* HERO SECTION */
+
+.hero{
+    padding:80px 0;
+    background:#f9f9f9;
+}
+
+.hero h1{
+    font-size:2.5rem;
+}
+
+.hero img{
+    max-height:420px;
+    object-fit:cover;
+}
+
+/* SECTION TITLES */
+
+.section-title{
+    font-weight:700;
+    margin-bottom:10px;
+}
+
+.gold-line{
+    width:70px;
+    height:4px;
+    background:goldenrod;
+    margin-bottom:20px;
+}
+
+/* LIGHT GREEN BACKGROUND */
+
+.bg-light-green{
+    background:#f3f8f3;
+}
+
+/* LIST GROUP */
+
+.list-group-item{
+    border:none;
+    padding:12px 0;
+}
+
+/* CARD STYLING */
+
+.card-custom{
+    border:none;
+    border-radius:10px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.08);
+    transition:0.3s;
+}
+
+.card-custom:hover{
+    transform:translateY(-5px);
+    box-shadow:0 10px 20px rgba(0,0,0,0.15);
+}
+
+/* GOLD TITLES */
+
+.title-gold{
+    color:goldenrod;
+    font-weight:600;
+}
+
+/* COMMUNITY SECTION */
+
+section h4{
+    font-weight:600;
+}
+
+/* FOOTER */
+
+footer{
+    background:#0b3d2e;
+    color:white;
+    padding:20px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+}
+
+footer a{
+    color:white;
+    margin-left:15px;
+    font-size:18px;
+}
+
+footer a:hover{
+    color:gold;
+}
+
+/* SPINNER */
+
+.spinner{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:white;
+    z-index:9999;
+    display:none;
+}
+
+/* MOBILE TWEAKS */
+
+@media(max-width:768px){
+
+.hero{
+    text-align:center;
+}
+
+.hero img{
+    margin-top:20px;
+}
+
+footer{
+    text-align:center;
+    flex-direction:column;
+    gap:10px;
+}
+
+}
+    </style> -->
 <script defer src="bundle.js"></script><link href="main.css" rel="stylesheet"></head>
 <body>
   <!--nav section-->
@@ -41,7 +186,7 @@
             <li class="nav-item"><a href="" class="nav-link">Special Advisers</a></li>
             <li class="nav-item"><a href="" class="nav-link">Achievements</a></li>
             <li class="nav-item"><a href="" class="nav-link">Bills</a></li>
-            <li class="nav-item"><a href="/admin.html" class="nav-link">Admin</a></li>
+            <!-- <li class="nav-item"><a href="/admin.html" class="nav-link">Admin</a></li> -->
         </ul>
 
     </div>
@@ -77,14 +222,14 @@
         <h2 class="section-title">Personal Background</h2>
         <div class="gold-line"></div>
 
-        <p>
+        <p id="p-color">
             Chief Lukman Kayode Mudashiru, born July 28, 1969, hails from the illustrious 
             Mudashiru family of Pongbala Compound, Molete Quarters, Iwo, Osun State. 
             He is a distinguished Nigerian politician, real estate developer, and 
             respected community leader committed to excellence, integrity, and service to humanity.
         </p>
 
-        <p>
+        <p id="p-color">
             His leadership blends professionalism, discipline, and compassion — 
             qualities that have defined both his public service and private enterprise.
         </p>
@@ -127,7 +272,7 @@
         <h2 class="section-title">Political Career</h2>
         <div class="gold-line mx-auto"></div>
 
-        <p class="mt-4">
+        <p id="p-color" class="mt-4">
             Currently serving as Member of the House of Representatives, 
             representing Ayedire/Iwo/Ola-Oluwa Federal Constituency.
         </p>
