@@ -82,6 +82,16 @@ module.exports = {
             filename: 'university.html',
             template: './src/university.html',
         }),
+        new HtmlWebpackPlugin({
+            title: 'Webpack App',
+            filename: 'collegeform.html',
+            template: './src/collegeform.html',
+        }),
+        new HtmlWebpackPlugin({
+            title: 'Webpack App',
+            filename: 'universityform.html',
+            template: './src/universityform.html',
+        }),
         new MiniCssExtractPlugin(),
         new CopyWebpackPlugin({
       patterns: [

@@ -45,7 +45,6 @@ class Utility{
         this._spinner.classList.add('show')
     }
    removeSpinner(){
-        console.log(this._spinner)
         this._spinner.classList.remove('show')
     }
 
@@ -70,7 +69,7 @@ class Utility{
                 return
             }
             global++
-            console.log('he')
+           
         }
 }
 

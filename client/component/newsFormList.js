@@ -13,6 +13,7 @@ class NewsFormList{
         
     }
 
+
     async _getNews(global){
         
         
