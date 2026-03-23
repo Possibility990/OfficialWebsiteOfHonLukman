@@ -163,22 +163,25 @@ footer{
   width: 100%;
   background-color: var(--primary-color);
   color: #f4f4f4;
+   margin: auto;
   margin-top: 100px;
   height: 60px;
   display: flex;
   justify-content:space-between;
   align-items: center;
   position: relative;
+ 
 }
 
 
 footer #box-2{
   position: absolute;
- right: 10px;
+  right: 10px;
 }
 footer #box-1{
   position: absolute;
- left: 10px;
+  left: 10px;
+  font-size: 15px;
 }
 
 footer i{
@@ -306,43 +309,46 @@ footer i{
 
 @media(max-width:700px){
 
-  .row-1{
-  display: flex;
-  flex-direction: column;
-  /* background-color: red; */
-  justify-content: space-between;
-  align-items: center;
-  
-}
-.row-1 .colu-1{
-  width: 100%;
-  height: 400px;
-  border-radius: 25px;
-  border: 14px solid var(--primary-color);
-}
+      .row-1{
+      display: flex;
+      flex-direction: column;
+      /* background-color: red; */
+      justify-content: space-between;
+      align-items: center;
+      
+    }
+    .row-1 .colu-1{
+      width: 100%;
+      height: 400px;
+      border-radius: 25px;
+      border: 14px solid var(--primary-color);
+    }
 
-.row-1 .colu-2{
-  width: 100%;
+    .row-1 .colu-2{
+      width: 100%;
 
-}
-.row-1 .colu-2 p{
-  margin-top:50px;
-  border-top: 14px solid var(--primary-color);
-  border-left: 14px solid var(--primary-color);
-  border-radius: 15px;
-  text-align: justify;
- 
-}
+    }
+    .row-1 .colu-2 p{
+      margin-top:50px;
+      border-top: 14px solid var(--primary-color);
+      border-left: 14px solid var(--primary-color);
+      border-radius: 15px;
+      text-align: justify;
+    
+    }
 
-footer #box-1{
-  font:10px normal 'Segoe UI', sans-serif;;
+    footer #box-1{
+      font:10px normal 'Segoe UI', sans-serif;;
+      /* color: red; */
+      font-size: 12px;
 
-}
-footer #box-2 i{
-  font:15px normal 'Segoe UI', sans-serif;;
-  color: var(--gold);
+    }
+    footer #box-2 i{
+      font:10px normal 'Segoe UI', sans-serif;;
+      color: var(--gold);
+      font-size: 20px;
 
-}
+    }
 
 }
 
@@ -387,12 +393,14 @@ footer #box-2 i{
 
 .form-group label{
   display: block;
+  margin-bottom:0;
+  color: white;
 }
 
 .form-group {
   margin: auto;
   width: 80%;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
  
  
 }
@@ -422,13 +430,9 @@ footer #box-2 i{
   border-radius: 15px;
 }
 
-.form-group label{
-  margin-bottom: 10px;
-  color: white;
-}
 
 .form-group input{
-    width: 100%;
+  width: 100%;
  border: none;
  height:50px; 
  border: none;
@@ -492,12 +496,15 @@ footer #box-2 i{
 
 .scholar-img{
     width:100%;
+    max-height: 500px;
 }
 
 .scholar-img img{
     width:100%;
     height:auto;
     display:block;
+    object-fit: contain;
+    object-position:  center;
 }
 
 /* student info */
@@ -571,4 +578,22 @@ footer #box-2 i{
   width: 100%;
   border: none;
   border-radius: 15px;
+}
+
+#preview {
+  height: 20px;
+  object-fit: cover;
+  margin-top: 5px;
+  border: 1px red solid;
+}
+
+ #input-p{
+  font-size:10px;
+  font-style: italic;
+  color: white;
+}
+
+#fileInput{
+  /* border: red solid 1px; */
+  height: auto;
 }

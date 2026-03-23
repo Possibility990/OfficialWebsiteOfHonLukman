@@ -6,6 +6,8 @@ class UniversityForm{
     constructor(global, utils){
     this.uniForm = document.querySelector('#university-form')
     this.fileInput = document.querySelector("#fileInput")
+    this._preview = document.getElementById('preview')
+    console.log(this._preview.src, 'its')
 
     this.global= global
     this.utils = utils
@@ -16,7 +18,28 @@ class UniversityForm{
 
     addEventListener(){
         this.uniForm.addEventListener('submit', this.handleUniSubmit.bind(this))
+        this.fileInput.addEventListener('change', this._changeEvent.bind(this))
     }
+
+
+    _changeEvent(){
+        const file =  this.fileInput.files[0]
+
+        if(file){
+            const reader = new FileReader()
+
+            reader.onload =  (e)=> {
+            this._preview.src = e.target.result;
+            this._preview.style.display = "block";
+    };
+
+            reader.readAsDataURL(file);
+            
+        }
+
+    }
+
+    
 
 
    async handleUniSubmit(e){
@@ -77,6 +100,8 @@ class UniversityForm{
         this.utils.removeSpinner()
 
         this.uniForm.reset()
+        this._preview.style.display = 'none'
+        alert('Data submitted successfully')
         // console.log(uniStudents)
 
     }

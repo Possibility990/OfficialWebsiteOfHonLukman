@@ -51,6 +51,7 @@ class NewsForm{
     
 
         this._newsForm.reset();
+        alert('News submited successfully')
 
         document.dispatchEvent(new Event('closeModal'))
             // -- Hide spinner

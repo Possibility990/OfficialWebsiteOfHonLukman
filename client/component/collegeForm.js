@@ -6,6 +6,7 @@ class CollegeForm{
     constructor(global, utils){
     this.collegeForm = document.querySelector('#college-form')
     this.fileInput = document.querySelector("#fileInput")
+    this._preview = document.getElementById('preview')
 
     this.global= global
     this.utils = utils
@@ -16,7 +17,27 @@ class CollegeForm{
 
     addEventListener(){
         this.collegeForm.addEventListener('submit', this.handleUniSubmit.bind(this))
+        this.fileInput.addEventListener('change', this._changeEvent.bind(this))
     }
+
+
+     _changeEvent(){
+        const file =  this.fileInput.files[0]
+
+        if(file){
+            const reader = new FileReader()
+
+            reader.onload =  (e)=> {
+            this._preview.src = e.target.result;
+            this._preview.style.display = "block";
+    };
+
+            reader.readAsDataURL(file);
+            
+        }
+
+    }
+
 
 
    async handleUniSubmit(e){
@@ -77,6 +98,8 @@ class CollegeForm{
         this.utils.removeSpinner()
 
         this.collegeForm.reset()
+        alert('Data uploaded successfully')
+        this._preview.style.display = 'none'
         // console.log(uniStudents)
 
     }
