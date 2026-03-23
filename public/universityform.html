@@ -1,1 +1,95 @@
-<!doctype html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>univeristyform</title><link rel="stylesheet" href="lib/fontawesome.css"><script defer="defer" src="bundle.js"></script><link href="main.css" rel="stylesheet"></head><body><div id="container"><div id="modal-university"><div id="modal-child-university"><form action="" id="university-form"><div class="form-group"><input id="fileInput" type="file" name="image" accept=".jpg,.png,image/*"><p>Upload image (Max size 300kb) jpg, png, image</p></div><div class="form-group"><label for="">Full Name</label> <input name="fullname" required></div><div class="form-group"><label for="">Level</label> <input name="level" required></div><div class="form-group"><label for="">Degree</label> <input name="degree" required></div><div class="form-group"><label for="">Course</label> <input name="course" required></div><div class="form-group"><label for="">Email</label> <input type="email" name="email" required></div><div class="form-group"><label for="">Tell</label> <input name="tel" required></div><div class="form-group"><label for="">LGA of Origin</label> <input name="lga" required></div><div class="form-group"><label for="">Address</label> <input name="address" required></div><div class="form-group"><label for="">DOB</label> <input type="date" name="dob" required></div><div class="form-group"><label for="">Parent/Guardian Name</label> <input name="parentname" required></div><div class="form-group"><label for="">Parent/Guardian Tell</label> <input name="parenttel" required></div><button type="submit">Submit</button></form></div></div></div><div class="spinner"><div class="ring"></div><div class="text">Vote L&K 2.0</div></div></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>univeristyform</title>
+     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"> -->
+    <!-- <link rel="stylesheet" href="style.css"> -->
+   <link rel="stylesheet" href="lib/fontawesome.css">
+<script defer src="bundle.js"></script><link href="main.css" rel="stylesheet"></head>
+<body>
+
+
+<div id="container">
+    <div id="modal-university">
+        <div id="modal-child-university">
+         <form action="" id="university-form">
+            
+          <div class="form-group">
+            <input id="fileInput" type="file" name="image" accept=".jpg,.png,image/*">
+              <img id="preview" style="width: 25px; margin-top: 5px; display: none; border: 1px solid #ccc;">
+              <p id="input-p">Upload image (Max size 300kb) jpg, png, image</p>
+          </div>
+
+          <div class="form-group">
+            <label for="">Full Name</label>
+            <input type="text" name="fullname" required>
+          </div>
+
+          <div class="form-group">
+            <label for="">Level</label>
+            <input type="text" name="level" required>
+          </div>
+          <div class="form-group">
+            <label for="">Degree</label>
+            <input type="text" name="degree" required>
+          </div>
+
+          <div class="form-group">
+            <label for="">Course</label>
+            <input type="text" name="course" required>
+          </div>
+          <div class="form-group">
+            <label for="">Email</label>
+            <input type="email" name="email" required>
+          </div>
+
+          <div class="form-group">
+            <label for="">Tell</label>
+            <input type="text" name="tel" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="">LGA of Origin</label>
+            <input type="text" name="lga" required>
+          </div>
+
+          <div class="form-group">
+            <label for="">Address</label>
+            <input type="text" name="address" required>
+          </div>
+
+          <div class="form-group">
+            <label for="">DOB</label>
+            <input type="date" name="dob" required>
+          </div>
+
+          <div class="form-group">
+            <label for="">Parent/Guardian Name</label>
+            <input type="text" name="parentname" required>
+          </div>
+
+          <div class="form-group">
+            <label for="">Parent/Guardian Tell</label>
+            <input type="text" name="parenttel" required>
+          </div>
+         
+
+
+          <button type="submit">Submit</button>
+        </form>
+      
+        </div>
+    </div>
+
+
+ 
+</div>
+<div class="spinner">
+  <div class="ring"></div>
+  <div class="text">L&K 2.0</div>
+</div>
+</body>
+</html>
