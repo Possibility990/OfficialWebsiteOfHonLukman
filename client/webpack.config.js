@@ -5,9 +5,9 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
     //before deployment
-    mode:'development',
+    // mode:'development',
     //during deployment
-    // mode: 'production',
+    mode: 'production',
     entry: './src/index.js',
     output:{
     path: path.resolve(__dirname, '../public'),
