@@ -23,6 +23,7 @@ import CollegeList from '../component/collegeList';
 const utils = new Utility()
 const newsForm = new NewsForm(global)
 const newFromList = new NewsFormList()
+
  
  
  
@@ -43,6 +44,7 @@ async function init(){
             // utils.showSpinner()
             
             newFromList._getNews(global);
+           
         
             
             // utils.removeSpinner()

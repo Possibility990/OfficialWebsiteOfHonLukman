@@ -13,7 +13,7 @@ const upload = multer({ storage: multer.memoryStorage() });
 router.get('/', async (req, res) => {
   try {
     const page = parseInt(req.query.page) || 1;
-    const limit = parseInt(req.query.limit) || 15; // default 15
+    const limit = parseInt(req.query.limit) || 2; // default 15
     const total = await Student.countDocuments();
 
     const query = Student.find().sort({ createdAt: -1 });

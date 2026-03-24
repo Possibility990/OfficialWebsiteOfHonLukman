@@ -7,6 +7,7 @@ class CollegeList{
         this.collegeList = document.getElementById('college-list')
         this.global = global
         this.utils = utils
+          this.paginationBtn = document.querySelector('#pagination')
       
        
 
@@ -19,9 +20,13 @@ class CollegeList{
             const res = await newsAPI.getNews('college-students', this.global)
           
             const datas = res.data.data
+
+            this.global.page = res.data.page;
+            this.global.totalPages = res.data.totalPages;
             
             
            this.createCollStudents(datas)
+           this.displayPagination(this.global)
             this.utils.removeSpinner()
         }catch(error){
             console.log(error)
@@ -68,6 +73,61 @@ class CollegeList{
 
         
      }
+
+                 displayPagination(global){
+                console.log(global.page, 'from pagination')
+        const div = document.createElement('div')
+        div.classList.add('pagination1')
+        div.innerHTML = `
+         <button class="btn btn-primary" id="prev">Prev</button>
+            <button class="btn btn-primary" id="next">Next</button>
+            <h5 id="page-counter"> Page: ${global.page} of ${global.totalPages}</h5>
+        `
+        this.paginationBtn.appendChild(div)
+     
+        this.prevBtn = document.querySelector('#prev')
+        this.nextBtn = document.querySelector('#next')
+        // Disable prevBtn on firt page
+        if(global.page === 1){
+            this.prevBtn.disabled = true
+            // this.nextBtn.disabled = false
+        }
+
+        // Disable nextBtn on last Page
+
+        if(global.page === global.totalPages){
+            //  this.prevBtn.disabled = false
+            this.nextBtn.disabled = true
+        }
+    
+        this.prevBtn.addEventListener('click', this.prev.bind(this, global))
+        this.nextBtn.addEventListener('click', this.next.bind(this,global))
+    }
+
+       // Previous
+       async prev(global){
+
+            global.page--
+            this.paginationBtn.innerHTML = ''
+
+            this.getCollStudents()
+            console.log(global.page, 'from prev')
+         
+           
+           
+        }
+
+        // Previous
+       async next(global){
+            global.page++
+            this.paginationBtn.innerHTML = ''
+
+            this.getCollStudents()
+            
+      
+            
+           
+        }
 }
 
 

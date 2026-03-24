@@ -6,10 +6,11 @@ const utils = new Utility()
 
 class NewsFormList{
     constructor(){
-     
+    
    
         this._newsListEl = document.getElementById('news-list')
         this._newsDetailsEl = document.getElementById('news-details')
+          this.paginationBtn = document.querySelector('#pagination')
         
     }
 
@@ -22,9 +23,13 @@ class NewsFormList{
         const res = await newsAPI.getNews('news', global)
         
         const data = res.data.data
+        global.page = res.data.page
+        global.totalPages = res.data.totalPages
+        global.totalResults = res.data.totalResults
+        
         this._render(data)
         utils.removeSpinner()
-        utils.displayPagination(global)
+        this.displayPagination(global)
 
             
 
@@ -115,6 +120,66 @@ class NewsFormList{
 
        
     }
+
+
+
+        displayPagination(global){
+        const div = document.createElement('div')
+        div.classList.add('pagination1')
+        div.innerHTML = `
+         <button class="btn btn-primary" id="prev">Prev</button>
+            <button class="btn btn-primary" id="next">Next</button>
+            <h5 id="page-counter"> Page: ${global.page} of ${global.totalPages}</h5>
+        `
+        this.paginationBtn.appendChild(div)
+     
+        this.prevBtn = document.querySelector('#prev')
+        this.nextBtn = document.querySelector('#next')
+        // Disable prevBtn on firt page
+        if(global.page === 1){
+            this.prevBtn.disabled = true
+            // this.nextBtn.disabled = false
+        }
+
+        // Disable nextBtn on last Page
+
+        if(global.page === global.totalPages){
+            //  this.prevBtn.disabled = false
+            this.nextBtn.disabled = true
+        }
+    
+        this.prevBtn.addEventListener('click', this.prev.bind(this, global))
+        this.nextBtn.addEventListener('click', this.next.bind(this,global))
+    }
+
+
+
+    
+        // Previous
+       async prev(global){
+
+            global.page--
+            this.paginationBtn.innerHTML = ''
+
+            this._getNews(global)
+            console.log(global.page, 'from prev')
+         
+           
+           
+        }
+
+        // Previous
+       async next(global){
+            global.page++
+            this.paginationBtn.innerHTML = ''
+
+            this._getNews(global)
+            
+      
+            
+           
+        }
+
 
  
     
