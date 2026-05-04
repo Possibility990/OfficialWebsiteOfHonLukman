@@ -37,5 +37,9 @@ app.use('/api/university-students', universityRouter);
 const collegeRouter = require('./router/collegeStudents');
 app.use('/api/college-students', collegeRouter);
 
+// Achievemtns
+const achievementRouter = require('./router/achievements')
+app.use('/api/achievements', achievementRouter)
+
 // Start server
 app.listen(port, () => console.log(`Server running on port ${port}`));

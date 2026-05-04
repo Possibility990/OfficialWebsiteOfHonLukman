@@ -27,7 +27,7 @@ class NewsForm{
      
         // const title = formData.get('title');
         // const image1 = formData.get('sections[0][image]')
-        // const paragraph1 = formData.get('sections[0][text]')
+        // const paragraph1 = formData.get(0o'sections[0][text]')
         // const image2 = formData.get('sections[1][image]')
         // const paragraph2 = formData.get('sections[1][text]')
         // const image3 = formData.get('sections[2][image]')

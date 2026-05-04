@@ -20,7 +20,7 @@ class CollegeList{
             const res = await newsAPI.getNews('college-students', this.global)
           
             const datas = res.data.data
-
+            console.log(res.data)
             this.global.page = res.data.page;
             this.global.totalPages = res.data.totalPages;
             

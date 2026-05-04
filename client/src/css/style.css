@@ -68,7 +68,7 @@ a{
 }
 
 #logo{
-  margin-left: 5px;
+  margin-left: 8px;
 
 }
 .custom-nav {
@@ -77,10 +77,7 @@ a{
 .custom-nav2 {
   background-color: red !important;
 }
-/* span .navbar-toggler-icon{
-    border: none;
-} */
- 
+
 #card-head {
     background-color: #00008B !important;
     color: #ffffff;
@@ -92,7 +89,7 @@ a{
 
 .button{
   background-color: red; 
-   width: 100%;
+  width: 100%;
   height: 40px; 
   border-radius: 15px;
   padding: 10px 15px;
@@ -100,13 +97,6 @@ a{
   font-size: 5px;
   color: black;
 }
-
-
-   .hero {
-            background: var(--navy);
-            color: white;
-            padding: 80px 0;
-        }
 
 
 
@@ -137,8 +127,6 @@ a{
 #latest-news{
   border-bottom: 2px solid red ;
   margin-top: 30px;
-  /* margin-left: 15px; */
-  /* margin-right: 30px; */
   width: 80%;
   
 }
@@ -156,8 +144,6 @@ footer{
   position: relative;
  
 }
-
-
 footer #box-2{
   position: absolute;
   right: 10px;
@@ -167,15 +153,10 @@ footer #box-1{
   left: 10px;
   font-size: 15px;
 }
-
 footer i{
  font-size: 25px;
  color: var(--gold);
 }
-
-
-
-
 .con{
     margin-left: 50px;
     display: flex;
@@ -200,14 +181,9 @@ footer i{
  
 }
 
-.container-news img{
-  height: 100%;
-  width: auto;
-  display: block;
-}
 .container-news p{
   text-align: justify;
-  /* color: white; */
+
 }
 
 #news-details{
@@ -215,57 +191,37 @@ footer i{
 }
 
 #img-div{
- 
-  width: 100%;
-  /* height: auto;
-  overflow: hidden; */
-  /* border: red solid 1px; */
-  /* background-color: red; */
+ margin: auto;
+  width: 85%;
+  text-align: center;
 }
 
 #img-div img{
   width: 100%;
   height: auto;
-  overflow: hidden;
+  object-fit: contain;
+  border-radius: 10px;
 }
 .container-news p {
-  /* border: 1px red solid; */
-  /* margin: 20px; */
   padding: 20px;
   line-height: 1.8em;
 
 }
 .container-news h2 {
-  /* border: 1px red solid; */
-  /* margin: 20px; */
   text-align: center;
-
 }
 .container-news small{
   padding: 20px;
   font-style: italic;
   font-size: 12px;
 }
-
-#img-div img{
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  padding-top: 20px;
-  padding-bottom: 20px;
-
-  border-radius: 5px;
-}
-
 .container-about{
   margin: auto;
   width: 90%;
-  /* border: 1px orange solid; */
 }
 
  .row-1{
   display: flex;
-  /* background-color: red; */
   justify-content: space-between;
   align-items: center;
 }
@@ -333,20 +289,14 @@ footer i{
       font-size: 20px;
 
     }
-
 }
-
 
 /* for admin page*/
 
 #container{
   width: 100%;
   margin: auto;
-  /* margin-top: 40px; */
-  /* color: white; */
-  height: 600px;
-  
-
+  /* height: 1000px; */
 
 }
 
@@ -355,10 +305,6 @@ footer i{
   height: 100%;
   background-color:#f4f4f4;
   display: none;
-
- 
-
-  
 }
 
 #modal-child{
@@ -476,17 +422,14 @@ footer i{
     box-shadow:0 10px 25px rgba(0,0,0,0.15);
 }
 
-/* Image container */
-
 .scholar-img{
     width:100%;
-    max-height: 500px;
+    max-height: 300px;
 }
 
 .scholar-img img{
     width:100%;
     height:auto;
-    display:block;
     object-fit: contain;
     object-position:  center;
 }
@@ -580,4 +523,108 @@ footer i{
 #fileInput{
   /* border: red solid 1px; */
   height: auto;
+}
+
+/*achievement page css */
+
+.line-btn-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.line {
+  flex: 1;
+  height: 2px;
+  background-color: gold;
+}
+
+button {
+  padding: 0.5rem 1rem;
+  background-color: #00008B;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.card-image{
+  width: 100%;
+  max-height: 50px;
+  /* border: red solid 1px; */
+  overflow: hidden;
+}
+
+.card-imag imge{
+  width: 100%;
+  height: auto; 
+   object-fit: contain;
+  object-position: top;
+ 
+}
+
+#education{
+  width: 100%;
+  background-color:#00008B;
+}
+
+#health-care{
+  background-color: #28a745;
+  color: white;
+}
+#employment-oppo{
+  background-color: #6c757d;
+  color: white;
+}
+#agric{
+  background-color: #2e8b57;
+  color: white;
+}
+#rural{
+  background-color: rgb(92, 92, 23);
+  color: white;
+}
+#human-capital{
+  background-color:#6f42c1;
+  color: white;
+}
+#empowerment{
+  background-color: #fd7e14;
+  color: white;
+}
+#skill{
+  background-color: rgb(172, 49, 4);
+  color: white;
+}
+#paliatives{
+  background-color: #ffc107;
+  color: white;
+}
+
+#supply{
+  background-color: chocolate;
+  color: white;
+}
+#water-supply{
+  background-color: rgb(62, 188, 238);
+  color: white;
+}
+#road-infrastructure{
+  background-color: darkgray;
+  color: white;
+}
+#achievement p{
+line-height: 1.5em;
+}
+
+/* education*/
+#video-div{
+  width: 100%;
+  max-height: 400px;
+  /* border: red solid 1px; */
+  overflow: hidden;
+}
+
+#video-div iframe{
+  width: 80%;
+  /* height: auto; */
 }

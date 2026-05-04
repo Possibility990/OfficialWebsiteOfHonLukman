@@ -23,6 +23,7 @@ class NewsFormList{
         const res = await newsAPI.getNews('news', global)
         
         const data = res.data.data
+        console.log(res.data)
         global.page = res.data.page
         global.totalPages = res.data.totalPages
         global.totalResults = res.data.totalResults
@@ -65,7 +66,7 @@ class NewsFormList{
     const sectionsHTML = news.sections.map(section => {
 
         const imageHTML = section.image
-        ? `<div class="img-div">
+        ? `<div id="img-div">
                 <img src="${section.image}" class="img-fluid" alt="">
            </div>`
         : '';

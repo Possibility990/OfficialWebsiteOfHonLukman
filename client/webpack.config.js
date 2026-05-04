@@ -31,6 +31,12 @@ module.exports = {
         }
         ]
     },
+    
+      // <- HERE
+  performance: {
+    hints: false
+  },
+
     module:{
         rules:[
             {
@@ -91,6 +97,71 @@ module.exports = {
             title: 'Webpack App',
             filename: 'universityform.html',
             template: './src/universityform.html',
+        }),
+        new HtmlWebpackPlugin({
+            title: 'Webpack App',
+            filename: 'achievements.html',
+            template: './src/achievements.html',
+        }),
+        new HtmlWebpackPlugin({
+            title: 'Webpack App',
+            filename: 'achievementForm.html',
+            template: './src/achievementForm.html',
+        }),
+        new HtmlWebpackPlugin({
+            title: 'Webpack App',
+            filename: 'education.html',
+            template: './src/education.html',
+        }),
+        new HtmlWebpackPlugin({
+            title: 'Webpack App',
+            filename: 'health.html',
+            template: './src/health.html',
+        }),
+        new HtmlWebpackPlugin({
+            title: 'Webpack App',
+            filename: 'ruralelect.html',
+            template: './src/ruralelect.html',
+        }),
+        new HtmlWebpackPlugin({
+            title: 'Webpack App',
+            filename: 'empowerment.html',
+            template: './src/empowerment.html',
+        }),
+        new HtmlWebpackPlugin({
+            title: 'Webpack App',
+            filename: 'employment.html',
+            template: './src/employment.html',
+        }),
+        new HtmlWebpackPlugin({
+            title: 'Webpack App',
+            filename: 'road-infrastructure.html',
+            template: './src/road-infrastructure.html',
+        }),
+        new HtmlWebpackPlugin({
+            title: 'Webpack App',
+            filename: 'water-supply.html',
+            template: './src/water-supply.html',
+        }),
+        new HtmlWebpackPlugin({
+            title: 'Webpack App',
+            filename: 'skill-acquisition.html',
+            template: './src/skill-acquisition.html',
+        }),
+        new HtmlWebpackPlugin({
+            title: 'Webpack App',
+            filename: 'festive-supply.html',
+            template: './src/festive-supply.html',
+        }),
+        new HtmlWebpackPlugin({
+            title: 'Webpack App',
+            filename: 'palliative.html',
+            template: './src/palliative.html',
+        }),
+        new HtmlWebpackPlugin({
+            title: 'Webpack App',
+            filename: 'human-capital.html',
+            template: './src/human-capital.html',
         }),
         new MiniCssExtractPlugin(),
         new CopyWebpackPlugin({

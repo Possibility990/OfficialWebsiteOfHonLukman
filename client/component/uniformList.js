@@ -7,7 +7,7 @@ class UniformList{
         this.UniformList = document.getElementById('uniform-list')
         this.global = global
         this.utils = utils
-          this.paginationBtn = document.querySelector('#pagination')
+        this.paginationBtn = document.querySelector('#pagination')
         
       
        

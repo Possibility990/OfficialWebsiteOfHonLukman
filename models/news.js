@@ -2,10 +2,10 @@ const mongoose = require('mongoose');
 
 const SectionSchema = new mongoose.Schema({
     image: {
-        type: String, // optional
+        type: String // optional
     },
     text: {
-        type: String, // optional
+        type: String // optional
     }
 });
 
@@ -15,7 +15,6 @@ const NewsSchema = new mongoose.Schema({
         required: [true, 'Please provide a title for the news post']
     },
 
-    // ✅ NEW FIELD
     curiosityGap: {
         type: String,
         required: [true, 'Please provide a curiosity hook'],
@@ -30,8 +29,9 @@ const NewsSchema = new mongoose.Schema({
 
     date: {
         type: Date,
-        default: Date.now
+        default: Date.now // keep your old system
     }
-});
+
+}, { timestamps: true }); // 🔥 adds createdAt + updatedAt
 
 module.exports = mongoose.model('News', NewsSchema);

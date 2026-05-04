@@ -15,6 +15,7 @@ import UniversityForm from '../component/universityform';
 import UniformList from '../component/uniformList';
 import CollegeForm from '../component/collegeForm';
 import CollegeList from '../component/collegeList';
+import AchievementForm from '../component/achievementForm';
 
 
 
@@ -88,6 +89,9 @@ async function init(){
             console.log('you are in collge form page')
             const colFornm = new CollegeForm(global, utils)
         break;
+        case '/achievementForm.html':
+            const achievementForm = new AchievementForm(global, utils)
+            console.log('You are in achievementForm page')
     }
 
     utils.highlightActiveLink()
