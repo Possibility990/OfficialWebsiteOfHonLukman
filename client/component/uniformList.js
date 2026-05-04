@@ -52,7 +52,6 @@ class UniformList{
                 <li><strong>Name:</strong> ${data.fullname}</li>
                 <li><strong>Level:</strong> ${data.level}</li>
                 <li><strong>Course:</strong> ${data.course}</li>
-                <li><strong>Tel:</strong> ${data.tel}</li>
                 <li><strong>LGA:</strong> ${data.lga}</li>
                 <li><strong>Parent:</strong> ${data.parentname}</li>
                 <li><strong>Guardian Tel:</strong> ${data.parenttel}</li>
