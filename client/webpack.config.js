@@ -5,9 +5,9 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
     //before deployment
-    // mode:'development',
+    mode:'development',
     //during deployment
-    mode: 'production',
+    // mode: 'production',
     entry: './src/index.js',
     output:{
     path: path.resolve(__dirname, '../public'),
@@ -120,8 +120,8 @@ module.exports = {
         }),
         new HtmlWebpackPlugin({
             title: 'Webpack App',
-            filename: 'ruralelect.html',
-            template: './src/ruralelect.html',
+            filename: 'rural-electrification.html',
+            template: './src/rural-electrification.html',
         }),
         new HtmlWebpackPlugin({
             title: 'Webpack App',
@@ -160,8 +160,13 @@ module.exports = {
         }),
         new HtmlWebpackPlugin({
             title: 'Webpack App',
-            filename: 'human-capital.html',
-            template: './src/human-capital.html',
+            filename: 'human-capital-development.html',
+            template: './src/human-capital-development.html',
+        }),
+        new HtmlWebpackPlugin({
+            title: 'Webpack App',
+            filename: 'agriculture.html',
+            template: './src/agriculture.html',
         }),
         new MiniCssExtractPlugin(),
         new CopyWebpackPlugin({

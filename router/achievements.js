@@ -39,10 +39,10 @@ const uploadToCloudinary = (buffer) => {
 };
 
 
-// ================= GET ALL (LATEST FIRST) =================
-router.get('/projects', async (req, res) => {
+// ================= Get Single =================
+router.get('/:id', async (req, res) => {
   try {
-    const projects = await Achievement.find().sort({ createdAt: -1 });
+    const projects = await Achievement.find();
     res.status(200).json(projects);
   } catch (err) {
     res.status(500).json({ error: err.message });
@@ -51,7 +51,7 @@ router.get('/projects', async (req, res) => {
 
 
 // ================= GET ALL (WITH PAGINATION) =================
-router.get('/projects', async (req, res) => {
+router.get('/', async (req, res) => {
   try {
     // page & limit from query params
     const page = parseInt(req.query.page) || 1;
@@ -70,7 +70,7 @@ router.get('/projects', async (req, res) => {
       total,
       page,
       pages: Math.ceil(total / limit),
-      results: projects
+      data: projects
     });
 
   } catch (err) {
@@ -80,7 +80,7 @@ router.get('/projects', async (req, res) => {
 
 
 // ================= CREATE =================
-router.post('/projects', uploadFields, async (req, res) => {
+router.post('/', uploadFields, async (req, res) => {
   try {
     const images = [];
 
@@ -106,7 +106,7 @@ router.post('/projects', uploadFields, async (req, res) => {
       }
     }
 
-    if (!req.body.title || !req.body.description || !req.body.video) {
+    if (!req.body.title) {
       return res.status(400).json({ error: "Missing required fields" });
     }
 
@@ -116,6 +116,7 @@ router.post('/projects', uploadFields, async (req, res) => {
       video: req.body.video,
       videocaption: req.body.videocaption,
       title: req.body.title,
+      link:req.body.link,
       images
     });
 
@@ -128,7 +129,7 @@ router.post('/projects', uploadFields, async (req, res) => {
 
 
 // ================= UPDATE =================
-router.put('/projects/:id', uploadFields, async (req, res) => {
+router.put('/:id', uploadFields, async (req, res) => {
   try {
     const images = [];
 
@@ -153,6 +154,8 @@ router.put('/projects/:id', uploadFields, async (req, res) => {
         });
       }
     }
+
+    console.log(req.body.link)
 
     const updatedData = {
       projectcateogry: req.body.projectcateogry,
@@ -181,7 +184,7 @@ router.put('/projects/:id', uploadFields, async (req, res) => {
 
 
 // ================= DELETE =================
-router.delete('/projects/:id', async (req, res) => {
+router.delete('/:id', async (req, res) => {
   try {
     const project = await Achievement.findByIdAndDelete(req.params.id);
 

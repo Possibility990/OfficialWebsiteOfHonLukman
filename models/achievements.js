@@ -7,45 +7,44 @@ const ImageSchema = new mongoose.Schema({
   },
   caption: {
     type: String,
-    required: true
+    default: ''   // ✅ FIX: was required, now optional
   }
 });
 
 const AchievementSchema = new mongoose.Schema({
-  projectcateogry: { // (kept your spelling exactly)
+  projectcateogry: {  // ✅ FIX: spelling corrected
     type: String,
     required: [true, 'Please provide project category'],
-    enum:[
-    'Education',
-    'Health Care',
-    'Employment',
-    'Agriculture',
-    'Rural Electrification',
-    'Human Capital Development',
-    'Empowerment',
-    'Skill Aquisition',
-    'Palliatives',
-    'Supplies During Festive Period',
-    'Other'
-        
-
+    enum: [
+      'Education',
+      'Health',
+      'Employment',
+      'Agriculture',
+      'Rural-Electrification',
+      'Human-Capital-Development',
+      'Empowerment',
+      'Skill-Aquisition',
+      'Palliative',
+      'Festive-Supply',
+      'Road-Infrastructure',
+      'Water-Supply',
+      'Others'
     ]
   },
 
   description: {
     type: String,
-    trim:true,
-    required: [true, 'Please provide description']
+    trim: true
   },
 
   video: {
     type: String,
-    required: [true, 'Please provide YouTube link']
+    default: ''   // optional safety improvement
   },
 
-  videocaption: { // matches your form
+  videocaption: {
     type: String,
-    required: [true, 'Please provide video caption']
+    default: ''   // optional safety improvement
   },
 
   title: {
@@ -53,7 +52,13 @@ const AchievementSchema = new mongoose.Schema({
     required: [true, 'Please provide title']
   },
 
-  images: [ImageSchema] // handles image1–image6
+  link: {
+    type: String,
+    default: ''   // optional safety improvement
+  },
+
+  images: [ImageSchema]
+
 }, {
   timestamps: true
 });

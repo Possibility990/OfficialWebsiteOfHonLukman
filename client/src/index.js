@@ -16,6 +16,7 @@ import UniformList from '../component/uniformList';
 import CollegeForm from '../component/collegeForm';
 import CollegeList from '../component/collegeList';
 import AchievementForm from '../component/achievementForm';
+import AchievementList from '../component/achivementList';
 
 
 
@@ -28,14 +29,6 @@ const newFromList = new NewsFormList()
  
  
  
-
-
-
-
-
-
-
-
 async function init(){
     switch(global.currentPage){
         case '/':
@@ -75,10 +68,7 @@ async function init(){
             console.log('you are in admin page')
             const modal = new Modal()
             newsForm.render();
-            // utils.showSpinner();
-            // newsForm.postNews();
-            // utils.removeSpinner();
-            // utils.removeSpinner()
+         
         break;
         case '/universityform.html':
             console.log('you are in university form home page')
@@ -92,6 +82,44 @@ async function init(){
         case '/achievementForm.html':
             const achievementForm = new AchievementForm(global, utils)
             console.log('You are in achievementForm page')
+        break;
+        case '/education.html':
+             new AchievementList(global, utils);
+        break;
+        case '/health.html':
+            new AchievementList(global, utils);
+        break;
+        case '/agriculture.html':
+            new AchievementList(global, utils);
+        break;
+        case '/employment.html':
+            new AchievementList(global, utils);
+        break;
+        case '/empowerment.html':
+            new AchievementList(global, utils);
+        break;
+        case '/festive-supply.html':
+            new AchievementList(global, utils);
+        break;
+        case '/human-capital-development.html':
+            new AchievementList(global, utils);
+        break;
+        case '/palliative.html':
+            new AchievementList(global, utils);
+        break;
+        case '/road-infrastructure.html':
+            new AchievementList(global, utils);
+        break;
+        case '/rural-electrification.html':
+            new AchievementList(global, utils);
+        break;
+        case '/skill-acquisition.html':
+            new AchievementList(global, utils);
+        break;
+        case '/water-supply.html':
+            new AchievementList(global, utils);
+            
+        
     }
 
     utils.highlightActiveLink()

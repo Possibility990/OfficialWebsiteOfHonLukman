@@ -1,6 +1,7 @@
 *{
   margin: 0;
   padding: 0;
+  scroll-behavior: smooth;
         }
         :root{
           --primary-color:#00008b;
@@ -617,14 +618,61 @@ line-height: 1.5em;
 }
 
 /* education*/
-#video-div{
+.video-div{
   width: 100%;
   max-height: 400px;
   /* border: red solid 1px; */
   overflow: hidden;
 }
 
-#video-div iframe{
+.video-div iframe{
   width: 80%;
   /* height: auto; */
+}
+
+
+
+#ach-div{
+ margin: auto;
+  width: 100%;
+  text-align: center;
+}
+
+#ach-div img{
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 10px;
+}
+
+#caption{
+  font-size: 14px;
+  padding: 16px;
+  text-align: left;
+  line-height: 1.6;
+}
+
+#achi-description{
+  color: black;
+  font-size: 16px;
+  padding:10px 10px;
+  color: black;
+  font-weight: none;
+  border-radius: 10px;
+  font-weight: none;
+  text-align:left;
+  width: 90%;
+  margin: auto;
+  line-height: 1.6;
+}
+
+#title{
+  background-color: rgb(255, 255, 255);
+  padding: 10px;
+  text-align: center;
+  font-size: 16px;
+  color: black;
+  border-radius: 10px;
+  box-shadow: 3px 3px 8px 4px grey;
+  /* text-align: center; */
 }
