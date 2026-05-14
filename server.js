@@ -11,7 +11,9 @@ const port = process.env.PORT || 5000;
 connectDB();
 
 // Static folder
-app.use(express.static(path.join(__dirname, './public')));
+app.use(express.static(path.join(__dirname, './public'),
+{ extensions: ['html']
+}));
 
 // Body parser
 app.use(express.json());

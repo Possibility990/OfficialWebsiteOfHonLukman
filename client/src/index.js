@@ -31,13 +31,13 @@ const newFromList = new NewsFormList()
  
 async function init(){
     switch(global.currentPage){
-        case '/':
-        case '/home.html':
-        case '/index.html':
+        // case '/':
+        // case '/home.html':
+        case '/news.html': // also my news page
             console.log('you are in home page')
             // utils.showSpinner()
-            
-            newFromList._getNews(global);
+              newFromList._getNews(global);
+          
            
         
             

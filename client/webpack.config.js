@@ -100,8 +100,8 @@ module.exports = {
         }),
         new HtmlWebpackPlugin({
             title: 'Webpack App',
-            filename: 'achievements.html',
-            template: './src/achievements.html',
+            filename: 'news.html',
+            template: './src/news.html',
         }),
         new HtmlWebpackPlugin({
             title: 'Webpack App',
