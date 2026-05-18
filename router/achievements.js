@@ -54,22 +54,22 @@ router.get('/:id', async (req, res) => {
 router.get('/', async (req, res) => {
   try {
     // page & limit from query params
-    const page = parseInt(req.query.page) || 1;
-    const limit = parseInt(req.query.limit) || 10;
+    // const page = parseInt(req.query.page) || 1;
+    // const limit = parseInt(req.query.limit) || 10;
 
-    const skip = (page - 1) * limit;
+    // const skip = (page - 1) * limit;
 
     const projects = await Achievement.find()
       .sort({ createdAt: 1 })   // latest last
-      .skip(skip)
-      .limit(limit);
+      // .skip(skip)
+      // .limit(limit);
 
     const total = await Achievement.countDocuments();
 
     res.status(200).json({
-      total,
-      page,
-      pages: Math.ceil(total / limit),
+      // total,
+      // page,
+      // pages: Math.ceil(total / limit),
       data: projects
     });
 

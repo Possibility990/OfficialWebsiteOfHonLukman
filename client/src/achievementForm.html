@@ -1,127 +1,114 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
- <link rel="stylesheet" href="lib/fontawesome.css"> -->
-      <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>  -->
-
-  <!-- <link rel="stylesheet" href="css/spinner.css">
-  <link rel="stylesheet" href="style.css"> -->
-    <title>officialWebsiteOfHonL&K</title>
+    <title>acievementForm</title>
+     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"> -->
+    <!-- <link rel="stylesheet" href="style.css"> -->
+   <link rel="stylesheet" href="lib/fontawesome.css">
 </head>
 <body>
-<nav  class=" navbar navbar-expand-md navbar-dark bg-primary custom-nav">
-    <a id="logo" href="/about.html" class="navbar-brand "> <img src="" alt="">Hon. L&K</a>
-
-    <button class="navbar-toggler" type="button" data-bs-toggle ="collapse" data-bs-target="#navBarNav">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="collapse navbar-collapse" id="navBarNav">
-        <ul class="navbar-nav ms-auto px-3">
-            <li class="nav-item"><a href="/index.html" class="nav-link">Home</a></li>
-            <li class="nav-item"><a href="/about.html" class="nav-link">About</a></li>
-            <li class="nav-item dropdown"><a href="#" 
-                class="nav-link 
-                dropdown-toggle"
-                id="scholars-dropdown"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-                >L&K Scholars</a>
-                   <ul class="dropdown-menu" aria-labelledby="scholarsDropdown">
-          <li><a class="dropdown-item" href="/university.html">Scholars in University</a></li>
-          <li><a class="dropdown-item" href="/college.html">Scholars in College</a></li>
-        </ul>
-            
-            </li>
-            <li class="nav-item"><a href="/achievements.html" class="nav-link">Achievements</a></li>
-            <li class="nav-item"><a href="/bills-motion.html" class="nav-link">Bills/Motions/Petitions</a></li>
-            <!-- <li class="nav-item"><a href="" class="nav-link">Special Advisers</a></li> -->
-            <!-- <li class="nav-item"><a href="/admin.html" class="nav-link">Admin</a></li> -->
-        </ul>
-
-    </div>
-</nav>
-
-  <section class="hero text-center text-md-start">
-    <div class="container">
-        <div class="row align-items-center">
-
-            <div class="col-md-6">
-                <h1 class="fw-bold">Hon. Chief Lukman Kayode Mudashiru</h1>
-                <div class="gold-line"></div>
-                <p class="lead">
-                    Federal Legislator • Real Estate Developer • Visionary Leader
-                </p>
-                <p>
-                    Member, House of Representatives – Ayedire/Iwo/Ola-Oluwa Federal Constituency
-                </p>
-            </div>
-
-            <div class="col-md-6 text-center">
-                <img src="/images/homebg2.jpg" class="img-fluid rounded shadow" alt="Hon L&K">
-            </div>
-
-        </div>
-    </div>
-</section>
 
 
-
-<!-- /*section for news card */ -->
-
-
-
-<div class="container  ">
-    <div id="latest-news" class="mx-auto text-center">
-    <h3>Latest News</h3>
-    
-</div>
- 
-
-
-<div id="news-list" class="row d-flex justify-content-evenly">
-
-
-</div> <!--row container end here-->
-
-    <div id="pagination">
-        <!-- <div class="pagination1">
-            <button class="btn btn-primary" id="prev">Prev</button>
-            <button class="btn btn-primary" id="next">Next</button>
-            <h3 id="page-counter"> Page1 of Total pages</h3>
-        </div> -->
-    </div>
-
-
-</div> <!--container div ends here-->
-
-    <footer> 
-        <div id="box-1">
-          &copy; L&K Media Team | All Rights Reserved
-        </div>
-        <div id="box-2">       
-            <a href="https://www.facebook.com/share/1CMEVaHB4A/" target="_blank">  <i class="fa-brands fa-facebook"></i></a>       
-            <a href="https://www.instagram.com/kayode_mudashiru?igsh=dmd6cmE5bm4waHJu" target="_blank">   <i class="fa-brands fa-instagram "></i></a>
-
-            <a href="https://x.com/KayodeMudashir" target="_blank"><i class="fa-brands fa-twitter"></i></a> 
-            
+<div id="container">
+    <div id="modal-university">
+        <div id="modal-child-university">
+         <form action="" id="achievement-form">
+          <div class="form-group">
+            <label  for=""  >Category of Project</label>
+            <input placeholder="e.g Education Human-Capital-Development, Employment etc " type="text" name="projectcateogry" required>
+            <p id="input-p">Here are the list of categories and they should be wrtten exactly like this in sentence case: Education, Health Care, Employment, Agriculture, Rural Electrification, Human Capital Development, Empowerment, Skill Aquisition, Palliatives, Supplies During Festive Period</p>
+          </div>
+          <!-- <div class="form-group">
+            <label  for=""  >Brief Description of Project</label>
+            <input placeholder="" type="text" name="description">
+          </div> -->
+          <div class="form-group">
+            <label for="">link of Youtube video</label>
+            <input type="text" name="video">
+          </div>
+          <div class="form-group">
+            <label for="">Caption of video</label>
+            <input type="text" name="videocaption">
+          </div>
+          <div class="form-group">
+            <label for="">Title</label>
+            <input type="text" name="title" required>
+          </div>
+          <div class="form-group">
+            <label for="">Link</label>
+            <input type="text" name="link">
+          </div>
+          <div class="form-group">
+            <input id="fileInput" type="file" name="image1" accept=".jpg,.png,image/*">
+              <img id="preview" style="width: 25px; margin-top: 5px; display: none; border: 1px solid #ccc;">
+              <p id="input-p">1. Upload image (Max size 500kb) jpg, png, image</p>
+          </div>
+          <div class="form-group">
+            <label for="">First Image Caption</label>
+            <input type="text" name="firstimage">
+          </div>
+          <div class="form-group">
+            <input id="fileInput" type="file" name="image2" accept=".jpg,.png,image/*">
+              <img id="preview" style="width: 25px; margin-top: 5px; display: none; border: 1px solid #ccc;">
+              <p id="input-p">2. Upload image (Max size 500kb) jpg, png, image</p>
+          </div>
+          <div class="form-group">
+            <label for="">Second Image Caption</label>
+            <input type="text" name="secondimage" >
+          </div>
+          <div class="form-group">
+            <input id="fileInput" type="file" name="image3" accept=".jpg,.png,image/*">
+              <img id="preview" style="width: 25px; margin-top: 5px; display: none; border: 1px solid #ccc;">
+              <p id="input-p">3. Upload image (Max size 500kb) jpg, png, image</p>
+          </div>
+          <div class="form-group">
+            <label for="">Third Image Caption</label>
+            <input type="text" name="thirdimage" >
+          </div>
+          <div class="form-group">
+            <input id="fileInput" type="file" name="image4" accept=".jpg,.png,image/*">
+              <img id="preview" style="width: 25px; margin-top: 5px; display: none; border: 1px solid #ccc;">
+              <p id="input-p">4. Upload image (Max size 500kb) jpg, png, image</p>
+          </div>
+          <div class="form-group">
+            <label for="">Fourth Image Caption</label>
+            <input type="text" name="fourthimage" >
+          </div>
+          <div class="form-group">
+            <input id="fileInput" type="file" name="image5" accept=".jpg,.png,image/*">
+              <img id="preview" style="width: 25px; margin-top: 5px; display: none; border: 1px solid #ccc;">
+              <p id="input-p">5. Upload image (Max size 500kb) jpg, png, image</p>
+          </div>
+          <div class="form-group">
+            <label for="">Fifth Image Caption</label>
+            <input type="text" name="fifthimage" >
+          </div>
+          <div class="form-group">
+            <input id="fileInput" type="file" name="image6" accept=".jpg,.png,image/*">
+              <img id="preview" style="width: 25px; margin-top: 5px; display: none; border: 1px solid #ccc;">
+              <p id="input-p">6. Upload image (Max size 500kb) jpg, png, image</p>
+          </div>
+          <div class="form-group">
+            <label for="">Sixth Image Caption</label>
+            <input type="text" name="sixthimage">
+          </div>
+     
+          <button type="submit">Submit</button>
+        </form>
         
-        </div>
+    </div>
 
-</footer>
+  </div>
+
+
+ 
+</div>
 <div class="spinner">
   <div class="ring"></div>
   <div class="text">L&K 2.0</div>
 </div>
-<!-- <div style="margin-top:500px"></div> -->
-
-
 </body>
 </html>

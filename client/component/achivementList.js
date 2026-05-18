@@ -56,9 +56,11 @@ class AchievementList{
                         <div id="ach-div">
                         <img src="${image.url}" class="img-fluid" alt="">
                         </div>
+                        
                          <h4 id="caption" class=" text-wrap m-0">
                             ${image.caption || ''}
                         </h4>
+                        
                     </div>
                     </div>
                         

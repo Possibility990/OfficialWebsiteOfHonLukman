@@ -23,7 +23,7 @@ const AchievementSchema = new mongoose.Schema({
       'Rural-Electrification',
       'Human-Capital-Development',
       'Empowerment',
-      'Skill-Aquisition',
+      'Skill-Acquisition',
       'Palliative',
       'Festive-Supply',
       'Road-Infrastructure',

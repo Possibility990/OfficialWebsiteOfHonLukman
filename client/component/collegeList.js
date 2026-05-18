@@ -43,7 +43,7 @@ class CollegeList{
             <div class="card scholar-card border-0 custom-nav2">
 
             <div class="scholar-img">
-            <img src="${data.image || '../images/scholars.png' }" alt="Scholar" loading="lazy">
+            <img src="${data.image || '../images/scholars.jpg' }" alt="Scholar" loading="lazy">
             </div>
 
             <div class="card-body custom-nav text-white">
