@@ -29,7 +29,7 @@ const NewsSchema = new mongoose.Schema({
 
     date: {
         type: Date,
-        default: new Date('2023-07-05') // keep your old system
+        default: new Date() // keep your old system
     }
 
 }, { timestamps: true }); // 🔥 adds createdAt + updatedAt
