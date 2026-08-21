@@ -87,8 +87,10 @@ class NewsFormList{
 
             <div>
                 <h2><strong>${news.title}</strong></h2>
-                <small>By L&K Media Team on ${news.date.slice(0,10)}</small>
+                <small>By L&K Media Team on ${news.createdAt.slice(0,10)}</small>
             </div>
+
+
 
             ${sectionsHTML}
 
