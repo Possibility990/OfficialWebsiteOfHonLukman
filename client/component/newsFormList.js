@@ -62,7 +62,7 @@ class NewsFormList{
 
 
    _createNewsDetails(news){
-
+    console.log(news.createdAt)
     const sectionsHTML = news.sections.map(section => {
 
         const imageHTML = section.image

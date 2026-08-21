@@ -68,7 +68,7 @@ class NewsForm{
     <input type="text" name="title">
   </div>
 
-  <!-- NEW FIELD -->
+
   <div class="form-group">
     <label>Curiosity Hook</label>
     <input 
