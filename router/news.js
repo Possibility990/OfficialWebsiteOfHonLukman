@@ -7,9 +7,7 @@ const cloudinary = require('../config/cloudinary');
 
 const upload = multer({ storage: multer.memoryStorage() });
 
-/* =========================
-   📥 GET ALL NEWS (page + limit)
-========================= */
+
 router.get('/', async (req, res) => {
   try {
     const page = parseInt(req.query.page) || 1;
@@ -34,9 +32,7 @@ router.get('/', async (req, res) => {
   }
 });
 
-/* =========================
-   📄 GET SINGLE NEWS ITEM
-========================= */
+
 router.get('/:id', async (req, res) => {
   try {
     const newsItem = await News.findById(req.params.id);
@@ -47,9 +43,7 @@ router.get('/:id', async (req, res) => {
   }
 });
 
-/* =========================
-   📝 CREATE NEWS
-========================= */
+
 router.post(
   '/',
   upload.fields([
@@ -91,9 +85,7 @@ router.post(
   }
 );
 
-/* =========================
-   ✏️ UPDATE NEWS
-========================= */
+
 router.put('/:id', async (req, res) => {
   try {
     const updatedNews = await News.findByIdAndUpdate(req.params.id, req.body, { new: true });
@@ -104,9 +96,7 @@ router.put('/:id', async (req, res) => {
   }
 });
 
-/* =========================
-   🗑 DELETE NEWS
-========================= */
+
 router.delete('/:id', async (req, res) => {
   try {
     const deletedNews = await News.findByIdAndDelete(req.params.id);

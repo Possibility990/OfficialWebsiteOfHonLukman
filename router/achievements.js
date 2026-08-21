@@ -79,7 +79,6 @@ router.get('/', async (req, res) => {
 });
 
 
-// ================= CREATE =================
 router.post('/', uploadFields, async (req, res) => {
   try {
     const images = [];

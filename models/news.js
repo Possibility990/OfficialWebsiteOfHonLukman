@@ -32,6 +32,6 @@ const NewsSchema = new mongoose.Schema({
         default: new Date() // keep your old system
     }
 
-}, { timestamps: true }); // 🔥 adds createdAt + updatedAt
+}, { timestamps: true }); //  adds createdAt + updatedAt
 
 module.exports = mongoose.model('News', NewsSchema);
