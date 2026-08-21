@@ -62,7 +62,7 @@ class NewsFormList{
 
 
    _createNewsDetails(news){
-    console.log(news.createdAt)
+   
     const sectionsHTML = news.sections.map(section => {
 
         const imageHTML = section.image
@@ -111,7 +111,7 @@ class NewsFormList{
             <div class="card-header bg-primary " id="card-head"><h5 class="card-title"><strong> ${news.title}</strong></h5>
             </div>
              <img data-id="${news._id}" class="background-img" src="${news.sections[0].image}" alt="">
-            <small class="text-muted general-color mb-0">By L&K Media Team on ${news.date.slice(0,10)}</small>
+            <small class="text-muted general-color mb-0">By L&K Media Team on ${news.createdAt.slice(0,10)}</small>
             <div class="card-body ">
                 <p class="card-text">${news.curiosityGap}</p>
             </div>
