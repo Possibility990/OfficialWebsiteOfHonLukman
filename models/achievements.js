@@ -7,12 +7,12 @@ const ImageSchema = new mongoose.Schema({
   },
   caption: {
     type: String,
-    default: ''   // ✅ FIX: was required, now optional
+    default: ''  
   }
 });
 
 const AchievementSchema = new mongoose.Schema({
-  projectcateogry: {  // ✅ FIX: spelling corrected
+  projectcateogry: {  
     type: String,
     required: [true, 'Please provide project category'],
     enum: [
@@ -39,12 +39,12 @@ const AchievementSchema = new mongoose.Schema({
 
   video: {
     type: String,
-    default: ''   // optional safety improvement
+    default: ''   
   },
 
   videocaption: {
     type: String,
-    default: ''   // optional safety improvement
+    default: ''   
   },
 
   title: {
@@ -54,7 +54,7 @@ const AchievementSchema = new mongoose.Schema({
 
   link: {
     type: String,
-    default: ''   // optional safety improvement
+    default: ''  
   },
 
   images: [ImageSchema]

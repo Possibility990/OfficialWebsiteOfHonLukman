@@ -4,8 +4,17 @@ const path = require('path');
 require('dotenv').config();
 const connectDB = require('./config/db'); // Connects to MongoDB
 
+
+
 const app = express();
 const port = process.env.PORT || 5000;
+
+
+// routers 
+const newsRouter = require('./router/news');
+const universityRouter = require('./router/universityStudents');
+const collegeRouter = require('./router/collegeStudents');
+const achievementRouter = require('./router/achievements')
 
 // Connect to MongoDB
 connectDB();
@@ -27,20 +36,16 @@ app.use(
   })
 );
 
-// Routes
-const newsRouter = require('./router/news');
+// Mount news router
 app.use('/api/news', newsRouter);
 
-// ✅ University students
-const universityRouter = require('./router/universityStudents');
+// Mount  University students router
 app.use('/api/university-students', universityRouter);
 
-// ✅ College students
-const collegeRouter = require('./router/collegeStudents');
+// Mount  College students router
 app.use('/api/college-students', collegeRouter);
 
-// Achievemtns
-const achievementRouter = require('./router/achievements')
+// Mount  Achievemtns  router
 app.use('/api/achievements', achievementRouter)
 
 // Start server
