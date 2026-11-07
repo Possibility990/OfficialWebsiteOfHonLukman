@@ -34,11 +34,9 @@ class AchievementList{
     }
 
         async createAchievement(datas){
-
             const page = this.global.currentPage
             const current = page.slice(1)
             const currentPage = current.split('.')[0]
-            console.log(currentPage, page)
 
         const filterAchievement = datas.filter((data)=>{
             return data.projectcateogry.toLowerCase() === currentPage

@@ -13,14 +13,14 @@ const {
    
 } = require('../controller/achievement')
 
+
 router.route('/')
+.get(getAllAchievements)
 .post(uploadFields, createAchievement)
 
-router.route('/')
-.get(getSingleAchievement)
-.get(getAllAchievements)
 
 router.route('/:id')
+.get(getSingleAchievement)
 .delete(deleteAchievement)
 .put(uploadFields, updateAchievement)
 
