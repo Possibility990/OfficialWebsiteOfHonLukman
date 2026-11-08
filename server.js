@@ -4,6 +4,9 @@ const path = require('path');
 require('dotenv').config();
 const connectDB = require('./config/db'); // Connects to MongoDB
 
+const {
+newsDetails
+} = require('./controller/newsDetails')
 
 
 const app = express();
@@ -18,6 +21,9 @@ const achievementRouter = require('./router/achievements')
 
 // Connect to MongoDB
 connectDB();
+
+// for link preview on whatsap and facebook
+app.get('/newsDetails.html', newsDetails)
 
 // Static folder
 app.use(express.static(path.join(__dirname, './public'),

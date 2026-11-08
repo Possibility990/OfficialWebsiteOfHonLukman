@@ -25,7 +25,6 @@ class NewsAPI{
 
     
     postNews(data, endPoint, global){
-        console.log(global.APIURL, 'from post news')
         
       return   axios.post(`${global.APIURL}${endPoint}`, data)
     }
